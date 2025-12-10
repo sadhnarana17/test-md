@@ -1,0 +1,112 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "plugin:@typescript-eslint/recommended",
+        "next/core-web-vitals",
+        "plugin:jsx-a11y/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "plugins": [
+        "@typescript-eslint"
+    ],
+    "rules": {
+        "prettier/prettier": [
+            "error",
+            {
+                "semi": false,
+                "singleQuote": true
+            }
+        ],
+        "@typescript-eslint/no-unused-vars": [
+            "error",
+            {
+                "varsIgnorePattern": "ref",
+                "ignoreRestSiblings": true
+            }
+        ],
+        "@typescript-eslint/no-explicit-any": "warn",
+        "react/no-unescaped-entities": 0,
+        "space-before-blocks": "error",
+        "block-spacing": "error",
+        "space-before-function-paren": "error",
+        "object-curly-newline": [
+            "error",
+            {
+                "minProperties": 2,
+                "consistent": true
+            }
+        ],
+        "object-curly-spacing": [
+            "error",
+            "always"
+        ],
+        "object-property-newline": "error",
+        "indent": [
+            "error",
+            2
+        ],
+        "comma-dangle": [
+            2,
+            "always-multiline"
+        ],
+        "keyword-spacing": "error",
+        "key-spacing": [
+            "error",
+            {
+                "mode": "strict"
+            }
+        ],
+        "arrow-spacing": [
+            "error",
+            {
+                "before": true,
+                "after": true
+            }
+        ],
+        "space-in-parens": [
+            "error",
+            "never"
+        ],
+        "no-console": [
+            "error",
+            {
+                "allow": [
+                    "warn",
+                    "error"
+                ]
+            }
+        ],
+        "comma-spacing": [
+            "error",
+            {
+                "before": false,
+                "after": true
+            }
+        ],
+        "semi-spacing": "error",
+        "space-infix-ops": "error",
+        "curly": "error",
+        "react/display-name": "off"
+    },
+    "overrides": [
+        {
+            "files": [
+                "*.test.tsx",
+                "*.test.ts"
+            ],
+            "rules": {
+                "@typescript-eslint/no-explicit-any": "off"
+            }
+        }
+    ]
+}
